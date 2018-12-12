@@ -17,7 +17,7 @@
 
     <div class="v ai" id="inicio">
         <div class="bz">
-            <img src="<%= data.thumbnailURL %>" alt="">
+            <img src="<%= data.cover ? data.cover : data.thumbnailURL %>" alt="">
         </div>
         <div class="header-wrapper c valign-wrapper">
             <div class="d iv">
@@ -25,6 +25,23 @@
             </div>
         </div>
     </div>
+
+    <% if(data.videoURL) { %>
+    <div class="v gw valign-wrapper" style="height: 75%">
+        <div class="c ci">
+            <div class="d iv jc offset-m1 ef">
+                <div class="c"> 
+                    <div class="d iv"><h2 class="section-title">Vídeo</h2></div>
+                </div>
+                <div class="c fb" data-duration="0" data-staggereddelay=".9">
+                    <div class="d iv jo kk fade-in-out" style="margin-left: 25.5%"> <!-- TRUQUE1 -->
+                        <iframe src="<%= data.videoURL %>" width="640" height="360" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
 
     <!-- Footer -->
     <% include ./partials/footer.ejs %>

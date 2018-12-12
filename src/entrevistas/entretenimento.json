@@ -2,6 +2,7 @@
     "name": "Entretenimento Multicultural",
     "address": false,
     "thumbnailURL": "https://cdn.mensagenscomamor.com/content/images/p000004437.jpg?v=0",
-    "videoURL": false,
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ois-DOys8J4IjUns5GpyeAokwxeySHZoJdoLm43SGRyRkO9_",
+    "videoURL": "https://www.youtube.com/embed/tyYDRfqmJfQ",
     "authors": ["João Monteiro"]
 }
