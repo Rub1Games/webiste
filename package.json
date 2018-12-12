@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://phazelmao@gitlab.com/phazelmao/cidadania-site.git"
+    "url": "git+https://github.com/Rub1Games/webiste.git"
   },
   "author": "Lucas",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/phazelmao/cidadania-site/issues"
+    "url": "https://github.com/Rub1Games/webiste/issues"
   },
-  "homepage": "https://gitlab.com/phazelmao/cidadania-site#readme",
+  "homepage": "https://github.com/Rub1Games/webiste#readme",
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
