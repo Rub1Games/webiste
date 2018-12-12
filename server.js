@@ -1,5 +1,6 @@
 const package = require('./package.json');
 const express = require('express');
+const snekfetch = require('snekfetch');
 const app = express();
 const http = require('http').Server(app);
 const port = 8080; // eslint-disable-line
@@ -8,12 +9,16 @@ app.use(express.static(`${__dirname}/src`));
 app.set('views', `${__dirname}/src/views`);
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('home');
+app.get('/', async(req, res) => {
+    let { body } = await snekfetch.get(`http://localhost:${port}/api/entrevistas`);
+
+    res.render('home', { data: body });
 });
 
-app.get('/test', (req, res) => {
-    res.render('test');
+app.get('/entrevista/:entrevista', async(req, res) => {
+    let { body } = await snekfetch.get(`http://localhost:${port}/api/entrevista/${req.params.entrevista}`);
+
+    res.render('entrevista', { data: body });
 });
 
 app.get('/gitlab', (req, res) => {
@@ -23,7 +28,9 @@ app.get('/gitlab', (req, res) => {
 app.use('/api', require('./api.js'));
 
 app.use((req, res) => {
-    res.status(404).send('404 Not Found');
+    res.status(404).json({message: '404 Not Found', coolthing: 'opa opa campeao'});
 });
 
-http.listen(port, () => console.log(`ok ${port}`));
+http.listen(port, () => {
+    console.log(`ok ${port}`)
+});

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Culture</title>
+
+    <!-- Stylesheet -->
+    <link href="/css/materialize.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body style="background-color:gray">
+    <!-- Navbar -->
+    <% include ./partials/navbar.ejs %>
+
+    <div class="v ai" id="inicio">
+        <div class="bz">
+            <img src="<%= data.thumbnailURL %>" alt="">
+        </div>
+        <div class="header-wrapper c valign-wrapper">
+            <div class="d iv">
+                <h1 style="color:white;"><%= data.name %></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <% include ./partials/footer.ejs %>
+
+    <!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/custom.min.js" crossorigin="anonymous"></script>
+    <script src="/js/custom2.js" crossorigin="anonymous"></script>
+</body>
+</html>

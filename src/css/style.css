@@ -28,10 +28,10 @@ nav.n.bi a, nav.n.ao a {
 
 .card-desc {
     position: absolute;
-    top: -11.3px;
-    bottom: -11.5px;
-    left: 13px;
-    right: 13.5px;
+    top: -12.5px;
+    bottom: -13px;
+    left: 11.5px;
+    right: 10px;
     background: rgba(16,16,16, 0.9);
     color: #fff;
     z-index: 99;
