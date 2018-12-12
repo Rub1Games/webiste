@@ -6,10 +6,11 @@
             <p>Made with &lt;3 by Ruben and Lucas.</p>
         </div>
         <div class="d ka ko">
-            <h5>Acerca</h5>
+            <h5>Entrevistas</h5>
             <ul>
-                <li><a href="/#introducao">Introdução</a></li>
-                <li><a href="/#interview">Entrevistas</a></li>
+                <% for(let entrevista of entrevistas) { %>
+                    <li><a href="/entrevista/<%= entrevista.name %>"><%= entrevista.content.name %></a></li>
+                <% } %>
             </ul>
         </div>
         <div class="d ka ko">

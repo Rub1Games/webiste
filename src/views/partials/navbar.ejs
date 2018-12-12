@@ -2,12 +2,34 @@
     <div class="nav-wrapper">
         <a href="/" class="brand-logo"><span>Culture</span></a>
         <ul id="nav-mobile" class="ag hide-on-med-and-down">
-            <li><a href="/">Início</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a class="dropdown-button" href="#" data-activates="pages" data-constrainWidth="false" data-belowOrigin="true">Entrevistas<i class="material-icons ag">arrow_drop_down</i></a></li>
+        </ul>
+
+        <ul id="pages" class="dropdown-content">
+            <% for(let entrevista of entrevistas) { %>
+                <li><a href="/entrevista/<%= entrevista.name %>"><%= entrevista.content.name %></a></li>
+            <% } %>
         </ul>
 
         <a href="#" data-activates="slide-out" class="button-collapse ag"><i class="material-icons white-text">menu</i></a>
     </div>
 </nav>
+
 <ul id="slide-out" class="side-nav">
-    <li><a class="waves-effect waves-teal" href="/">Início</a></li>
+    <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+        <li class="bold active">
+            <a class="collapsible-header waves-effect waves-teal active">Pages</a>
+            <div class="collapsible-body">
+            <ul>
+                <% for(let entrevista of entrevistas) { %>
+                    <li><a href="/entrevista/<%= entrevista.name %>"><%= entrevista.content.name %></a></li>
+                <% } %>
+            </ul>
+            </div>
+        </li>
+        </ul>
+    </li>
+    <li><a class="waves-effect waves-teal" href="/">Inicio</a></li>
 </ul>

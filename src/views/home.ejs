@@ -9,9 +9,10 @@
         <title>Culture</title>
 
         <!-- Stylesheet -->
-        <link href="/css/materialize.min.css" rel="stylesheet">
         <link href="/css/custom.css" rel="stylesheet">
         <link href="/css/style.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 	<body>
 
@@ -20,12 +21,12 @@
 
     <div class="v ai" id="inicio">
     	<div class="bz">
-	    	<img src="https://www.fatosdesconhecidos.com.br/wp-content/uploads/2015/10/explos%C3%A3o.jpg" alt="">
+	    	<img src="https://wallpaperplay.com/walls/full/9/0/1/124441.jpg" alt="">
     	</div>
       	<div class="header-wrapper c valign-wrapper">
         	<div class="d iv">
           		<h1 style="color:white;">Culture</h1>
-          		<a id="coisar" href="#interview">Entrevistas</a> <!-- TRUQUE2 -->
+          		<a id="coisar" href="#interview" class="smoothscroll">Entrevistas</a> <!-- TRUQUE2 -->
         	</div>
       	</div>
     </div>
@@ -51,7 +52,7 @@
           <h1>Entrevistas</h1>
           <div class="c masonry-grid">
 
-            <% for(let entrevista of data) { %>
+            <% for(let entrevista of entrevistas) { %>
                 <div class="d iv jo kk" style="cursor:pointer;" onclick="location.href = '/entrevista/<%= entrevista.name %>'">
                     <div class="m fade-in-out up-in-out" data-duration="0">
                         <div class="card-image">

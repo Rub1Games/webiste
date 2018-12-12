@@ -10,15 +10,17 @@ app.set('views', `${__dirname}/src/views`);
 app.set('view engine', 'ejs');
 
 app.get('/', async(req, res) => {
-    let { body } = await snekfetch.get(`http://localhost:${port}/api/entrevistas`);
+    let { body: entrevistas } = await snekfetch.get(`http://localhost:${port}/api/entrevistas`);
 
-    res.render('home', { data: body });
+    res.render('home', { entrevistas });
 });
 
 app.get('/entrevista/:entrevista', async(req, res) => {
-    let { body } = await snekfetch.get(`http://localhost:${port}/api/entrevista/${req.params.entrevista}`);
+    let { body: data } = await snekfetch.get(`http://localhost:${port}/api/entrevista/${req.params.entrevista}`);
+    let { body: entrevistas } = await snekfetch.get(`http://localhost:${port}/api/entrevistas`);
+    
 
-    res.render('entrevista', { data: body });
+    res.render('entrevista', { data, entrevistas });
 });
 
 app.get('/gitlab', (req, res) => {
@@ -32,5 +34,5 @@ app.use((req, res) => {
 });
 
 http.listen(port, () => {
-    console.log(`ok ${port}`)
+    console.log(`ok ${port}`);
 });
