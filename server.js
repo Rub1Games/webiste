@@ -23,7 +23,7 @@ app.get('/entrevista/:entrevista', async(req, res) => {
     res.render('entrevista', { data, entrevistas });
 });
 
-app.get('/gitlab', (req, res) => {
+app.get('/github', (req, res) => {
     res.redirect(package.homepage)
 })
 
