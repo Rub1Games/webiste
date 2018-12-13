@@ -4,11 +4,10 @@
     "address": "R. Alexandre Braga 23B, 1150-002 Lisboa",
     "authors": ["Guilherme Ferreira", "Pedro Latas", "Tomás Dias", "Sérgio Pereira"],
     "entrevistator": {
-      "name": "Daniel Antunes"
+      "icon": "https://this.might-be-super.fun/3872cc.png"
 	  },
     "entrevistado": {
-      "name": "Jamshed",
-      "icon": "https://this.might-be-super.fun/b9f4b9.png"
+      "icon": "https://this.might-be-super.fun/8ff157.png"
     },
     "entrevista": [
         {"msg": "Em que ano saiu do seu país?", "type": "entrevistator"},
