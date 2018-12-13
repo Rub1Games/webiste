@@ -3359,19 +3359,7 @@ small {
     max-height: 100%;
     overflow: hidden;
 }
-.card-image:hover .card-desc {
-    transform: scale(1.05);
-    visibility: visible;
-    opacity: 1;
-}
-.card-image:hover .vis {
-    transform: scale(1.05);
-    visibility: visible;
-    opacity: 1;
-}
-.card-image:hover {
-    transform: scale(1.1);
-}
+
 .m.dh .card-action, .m.dg .card-action, .m.do .card-action {
     position: absolute;
     bottom: 0;

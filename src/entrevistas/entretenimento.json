@@ -1,8 +1,8 @@
 {
     "name": "Entretenimento Multicultural",
     "address": false,
-    "thumbnailURL": "https://cdn.mensagenscomamor.com/content/images/p000004437.jpg?v=0",
-    "cover": false,
+    "thumbnailURL": "https://this.might-be-super.fun/667845.png",
+    "cover": "https://this.might-be-super.fun/667845.png",
     "videoURL": false,
     "authors": ["João Monteiro"],
     "slideshow": [

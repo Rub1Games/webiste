@@ -22,22 +22,40 @@ nav.n.bi a, nav.n.ao a {
     color: #ffffff;
 }
 
-#coisar:hover {
-    cursor: pointer;
-}
-
 .card-desc {
     position: absolute;
     top: -12.5px;
     bottom: -13px;
-    left: 11.5px;
-    right: 10px;
+    left: 2.4%;
+    right: 2.3%;
     background: rgba(16,16,16, 0.9);
     color: #fff;
     z-index: 99;
     visibility: hidden;
     opacity: 0;
+    -webkit-transition: opacity .4s; /* Safari */
+    transition: opacity .4s;
 }
+
+.card-image:hover .card-desc {
+    transform: scale(1.05);
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-image:hover .vis {
+    transform: scale(1.05);
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-image:hover {
+    -webkit-transition: transform .4s; /* Safari */
+    transition: transform .4s;
+
+    transform: scale(1.05);
+}
+
 p {
     font: bold 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
