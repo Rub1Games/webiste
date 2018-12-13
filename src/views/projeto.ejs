@@ -165,7 +165,7 @@
         </style>
 
         <div class="slideshow">
-            <!-- Container for the image gallery -->
+            <!-- SLIDESHAREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
             <div class="container">
                 <!-- Full-width images with number text -->
                 <% let len = data.slideshow.length; %>
@@ -190,6 +190,51 @@
                 </div>
             </div>
         </div>
+  
+        <script>
+        
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+                slideIndex += parseInt(n);
+                showSlides(slideIndex);
+            }
+            function currentSlide(n) {
+                slideIndex = parseInt(n);
+                showSlides(slideIndex);
+            }
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        
+            $(document).keydown(function(e) {
+                switch(e.which) {
+                    case 37: // left
+                      plusSlides(-1);
+                    break;
+
+                    case 39: // right
+                      plusSlides(1);
+                    break;
+
+                    default: return; // exit this handler for other keys
+                }
+                e.preventDefault(); // prevent the default action (scroll / move caret)
+            });
+        </script>
     
     <% } %>
 <style>

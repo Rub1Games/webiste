@@ -6,16 +6,16 @@ const http = require('http').Server(app);
 const port = 8080; // eslint-disable-line
 
 // Load interviews
-let nomes = fs.readdirSync('src/entrevistas');
-let entrevistas = [];
+let nomes = fs.readdirSync('src/projetos');
+let projetos = [];
 for(const nome of nomes) {
     if(nome.split('.')[1] == 'json')
-        entrevistas.push({name: nome.replace('.json', ''), content: require('./src/entrevistas/'+nome)});
+        projetos.push({name: nome.replace('.json', ''), content: require('./src/projetos/'+nome)});
 }
 
-function GetEntrevista(entrevista) {
-    for(let e of entrevistas) {
-        if(e.name === entrevista)
+function GetProjeto(projeto) {
+    for(let e of projetos) {
+        if(e.name === projeto)
             return e.content;
     }
 
@@ -27,15 +27,15 @@ app.set('views', `${__dirname}/src/views`);
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    return res.render('home', { entrevistas });
+    return res.render('home', { projetos });
 });
 
-app.get('/entrevista/:entrevista', (req, res) => {
-    let entrevista = GetEntrevista(req.params.entrevista);
-    if(entrevista === false)
+app.get('/projeto/:projeto', (req, res) => {
+    let projeto = GetProjeto(req.params.projeto);
+    if(projeto === false)
         return res.status(400).json({message: '400 Bad Request'});
     else
-        return res.render('entrevista', { data: entrevista, entrevistas });
+        return res.render('projeto', { data: projeto, projetos });
 });
 
 app.get('/github', (req, res) => {

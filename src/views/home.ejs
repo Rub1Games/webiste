@@ -48,16 +48,16 @@
     <div id="interview" class="v r full-height" style="background-color: #191919;">
       <div class="c">
         <div class="d iv jc offset-m1 ef">
-          <h1>Entrevistas</h1>
+          <h1>Projetos</h1>
           <div class="c masonry-grid">
 
-            <% for(let entrevista of entrevistas) { %>
-                <div class="d iv jo kk" style="cursor:pointer;" onclick="location.href = '/entrevista/<%= entrevista.name %>'">
+            <% for(let projeto of projetos) { %>
+                <div class="d iv jo kk" style="cursor:pointer;" onclick="location.href = '/projeto/<%= projeto.name %>'">
                     <div class="m fade-in-out up-in-out" data-duration="0">
                         <div class="card-image">
-                            <p class="card-desc"><br><br><br><%- entrevista.content.authors.join('<br>') %></p>
-                            <img src="<%= entrevista.content.thumbnailURL %>" width="640px" height="360px">
-                            <span class="card-title" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><%= entrevista.content.name %></span>
+                            <p class="card-desc"><br><br><br><%- projeto.content.authors.join('<br>') %></p>
+                            <img src="<%= projeto.content.thumbnailURL %>" width="640px" height="360px">
+                            <span class="card-title" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><%= projeto.content.name %></span>
                         </div>
                     </div>
                 </div>
