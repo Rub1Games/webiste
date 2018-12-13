@@ -23,13 +23,30 @@
         </div>
         <div class="header-wrapper c valign-wrapper">
             <div class="d iv">
-                <h1 style="color:white;"><%= data.name %></h1>
+                <h1 style="color:white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><%= data.name %></h1>
             </div>
         </div>
     </div>
 
+    <% if(data.address) { %>
+        <div class="v gw valign-wrapper" style="height: 50%">
+            <div class="c ci">
+                <div class="d iv jc offset-m1 ef">
+                    <div class="c"> 
+                        <div class="d iv"><h2 class="section-title">Morada</h2></div>
+                    </div>
+                    <div class="c fb" data-duration="0" data-staggereddelay=".9">
+                        <div class="d iv jo kk fade-in-out" style="margin-left: 34%"> <!-- TRUQUE1 -->
+                            <h4><%= data.address %></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>
+
     <% if(data.videoURL) { %>
-        <div class="v gw valign-wrapper" style="height: 75%">
+        <div class="v gw valign-wrapper" style="height: 50%">
             <div class="c ci">
                 <div class="d iv jc offset-m1 ef">
                     <div class="c"> 
