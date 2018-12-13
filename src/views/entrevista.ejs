@@ -192,10 +192,67 @@
         </div>
     
     <% } %>
+<style>
+  .batata {
+    position: relative;
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 65%;
+    margin-left:20%;
+  }
 
+  .batatadarker {
+    border-color: #ccc;
+    background-color: #cccccc;
+  }
+.batatadarker p{
+   position:relative;
+   text-align:right;
+   width:100vw;
+  }
+
+  
+  .batata::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .batata img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+
+  .batata img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+  }
+  
+  .batata p {
+    color: black;
+  }
+</style>
     <% if(data.entrevista) { %>
-        <!-- PRINTF -->
-        
+      <% for(const idx in data.entrevista) { %>
+        <% if(data.entrevista[idx].type === 'entrevistado') { %>
+          <div class="batata">
+            <img src="<%= data[data.entrevista[idx].type].icon ? data[data.entrevista[idx].type].icon : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png' %>" alt="Avatar" style="width:100%;">
+            <p><%= data.entrevista[idx].msg %></p>
+          </div>
+        <% } else {%>
+          <div class="batata batatadarker">
+            <img src="<%= data[data.entrevista[idx].type].icon ? data[data.entrevista[idx].type].icon : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png' %>" class="right" style="width:100%;font-align="right"">
+            <p><%= data.entrevista[idx].msg %></p>
+          </div>
+        <% } %>
+      <% } %>
     <% } %>
 
     <!-- Footer -->
