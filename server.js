@@ -1,5 +1,6 @@
-const package = require('./package.json');
+const pkg = require('./package.json');
 const express = require('express');
+const favicon = require('express-favicon');
 const fs = require('fs');
 const app = express();
 const http = require('http').Server(app);
@@ -23,6 +24,7 @@ function GetProjeto(projeto) {
 }
 
 app.use(express.static(`${__dirname}/src`));
+app.use(favicon('/favicon.png'));
 app.set('views', `${__dirname}/src/views`);
 app.set('view engine', 'ejs');
 

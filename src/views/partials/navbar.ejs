@@ -1,3 +1,9 @@
+<script>
+  if ($(window).width() <= 1366) {
+       alert('Website não automatizado e pouco recomendado para a resolução atual.\nPossivel solução: defina o zoom da página como 67%');
+  }
+</script>
+
 <nav class="n fq">
     <div class="nav-wrapper">
         <a href="/" class="brand-logo"><span>Culture</span></a>
@@ -33,11 +39,3 @@
     </li>
     <li><a class="waves-effect waves-teal" href="/">Inicio</a></li>
 </ul>
-
-<script>
-  if ($(window).width() < 960) {
-      while(true) {
-       alert('SITE NÃO AUTOMATIZADO PARA TELEMÓVEL');
-      }
-  }
-</script>
