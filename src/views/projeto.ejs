@@ -49,6 +49,20 @@
             </div>
         </div>
     <% } %>
+  
+  <% if(data.description) { %>
+      <div class="v gw valign-wrapper" style="height: 75%">
+          <div class="c ci">
+              <div class="d iv jc offset-m1 ef">
+                  <div class="c fb" data-duration="0" data-staggereddelay=".9">
+                      <div class="d iv jo kk fade-in-out" style="margin-left: 34%"> <!-- TRUQUE1 -->
+                          <h4><%- data.description %></h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  <% } %>
 
     <% if(data.videoURL) { %>
         <div class="v gw valign-wrapper" style="height: 50%">
