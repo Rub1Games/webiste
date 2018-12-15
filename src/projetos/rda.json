@@ -2,12 +2,6 @@
 		"name": "RDA Cultural Association",
 		"thumbnailURL": "https://this.might-be-super.fun/44d612.png",
     "authors": ["Daniel Antunes", "Miguel Parreiras", "Frederico Fernandes", "Miguel Miguel", "Afonso Brites"],
-    "entrevistator": {
-      "name": "Daniel Antunes"
-	  },
-    "entrevistado": {
-      "name": "Jamshed"
-    },
     "entrevista": [
 			{"msg": "What made you want to start a new life in another country?", "type": "entrevistator"},
 			{"msg": "Pakistan isn't safe. The streets are full of danger, and even the schools are dangerous. There's a lot of theft and robberies, but the most dangerous thing, it's the war itself, the gunfights and screans wouldnt let me sleep at night. I couldn't live there for much longer, so i decided to leave it all behind.", "type": "entrevistado"},

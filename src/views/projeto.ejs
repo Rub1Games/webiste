@@ -304,12 +304,12 @@
         <% for(const idx in data.entrevista) { %>
             <% if(data.entrevista[idx].type === 'entrevistado') { %>
                 <div class="batata">
-                    <img src="<%= data[data.entrevista[idx].type].icon ? data[data.entrevista[idx].type].icon : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png' %>" alt="Avatar" style="width:100%;">
+                    <img src="<%= data[data.entrevista[idx].type] ? (data[data.entrevista[idx].type].icon ? data[data.entrevista[idx].type].icon : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png') : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png' %>" alt="Avatar" style="width:100%;">
                     <p><%= data.entrevista[idx].msg %></p>
                 </div>
             <% } else {%>
                 <div class="batata batatadarker">
-                    <img src="<%= data[data.entrevista[idx].type].icon ? data[data.entrevista[idx].type].icon : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png' %>" class="right" style="width:100%;font-align="right"">
+                    <img src="<%= data[data.entrevista[idx].type] ? (data[data.entrevista[idx].type].icon ? data[data.entrevista[idx].type].icon : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png') : 'https://iptc.org/wp-content/uploads/2018/05/avatar-anonymous-300x300.png' %>" %>" class="right" style="width:100%;font-align=right">
                     <p><%= data.entrevista[idx].msg %></p>
                 </div>
             <% } %>

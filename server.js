@@ -39,7 +39,7 @@ app.get('/projeto/:projeto', (req, res) => {
 });
 
 app.get('/github', (req, res) => {
-    return res.redirect(package.homepage)
+    return res.redirect(pkg.homepage)
 })
 
 app.use((req, res) => {
